@@ -488,7 +488,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <!-- return  is-hidden to backdrop -->
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
@@ -530,16 +530,16 @@
           <label for="user-comment" class="modal-label">Комментарий</label>
         <textarea type="text" name="user-comment" class="modal-textarea" placeholder="Введите текст" id="user-comment"></textarea>
           </div>
-          <div class="modal-info">
+          <div class="modal-info modal-info-terms">
             <input type="checkbox" name="terms" value="check" id="modal-check" class="modal-check visually-hidden" />
-            <label for="modal-check" class="modal-check-text">Соглашаюсь с рассылкой и принимаю <a href="#" class="link link-input">Условия договора</a></label>
-
-
+            <label for="modal-check" class="modal-check-text"> <span><svg class="icon-check" width="16" height="15">
+              <use href="images/icons.svg#icon-check"></use>
+            </svg></span>Соглашаюсь с рассылкой и принимаю &nbsp;<a href="#" class="link-input link">Условия договора</a></label>
           </div>
         <button type="submit" class="modal-button">Отправить</button>   
         </form>
       </div>
     </div>
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
   </body>
 </html>

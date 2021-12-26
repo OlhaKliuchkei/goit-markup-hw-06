@@ -563,7 +563,8 @@ ul {
   align-items: center;
   justify-content: center;
 }
-.modal-close:hover + .close-cross {
+.modal-close:hover,
+.modal-close:focus {
   fill: var(--accent-color);
 }
 .close-cross {
@@ -580,10 +581,7 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
-}
-.modal-form {
-}
-.modal-info {
+  margin-bottom: 12px;
 }
 .modal-info:not(:last-of-type) {
   margin-bottom: 10px;
@@ -637,13 +635,49 @@ ul {
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-textarea:focus {
   border-color: var(--accent-color);
 }
-
 .modal-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
+}
+.modal-info-terms {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.modal-check-text {
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--link-color);
+  align-items: center;
+  justify-content: center;
+}
+.modal-check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--logo-black-color);
+  margin-right: 8px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-check {
+  fill: var(--white-color);
+}
+.modal-check:checked + .modal-check-text span {
+  background-color: var(--accent-color);
+  border: none;
+}
+.link-input {
+  display: inline-block;
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 .modal-button {
   display: block;
@@ -665,36 +699,6 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.modal-check-text {
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: var(--link-color);
-}
-.modal-check-text:before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--logo-black-color);
-  margin-right: 8px;
-  display: block;
-  border-radius: 2px;
-}
-.modal-check:checked + .modal-check-text::before {
-  background-color: var(--accent-color);
-  border: transparent;
-  background-image: url(../images/icon-check.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.link-input {
-  color: var(--accent-color);
-}
-
 /*------PORTFOLIO-NAVIGATION-------*/
 .btn-list {
   display: flex;
