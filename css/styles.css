@@ -406,6 +406,9 @@ ul {
   align-items: baseline;
   display: flex;
 }
+.container-footer-left {
+  flex-grow: 1;
+}
 .container-footer-center {
   margin-left: 70px;
   margin-right: 93px;
@@ -583,10 +586,11 @@ ul {
   color: var(--text-color);
   margin-bottom: 12px;
 }
-.modal-info:not(:last-of-type) {
+.modal-info:not(:nth-child(4n)) {
   margin-bottom: 10px;
 }
 .modal-label {
+  display: block;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -622,6 +626,7 @@ ul {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-textarea {
+  display: block;
   width: 100%;
   height: 120px;
   left: 576px;
@@ -641,7 +646,7 @@ ul {
 .modal-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-info-terms {
+.modal-terms {
   margin-top: 20px;
   margin-bottom: 30px;
 }
